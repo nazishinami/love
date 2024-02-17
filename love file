@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Love Test</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }
+
+  #noButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .moved {
+    transform: translate(200px, 200px);
+  }
+</style>
+</head>
+<body>
+
+<div id="questionContainer">
+  <h2>Do you love me?</h2>
+  <div class="button-container">
+    <button id="yesButton" onclick="replyLove()">Yes</button>
+    <button id="noButton" onclick="toggleMove()">No</button>
+  </div>
+</div>
+
+<script>
+function toggleMove() {
+  const noButton = document.getElementById('noButton');
+  noButton.classList.toggle('moved');
+}
+
+function replyLove() {
+  alert('I love you too!');
+}
+</script>
+
+</body>
+</html>
